@@ -39,6 +39,7 @@ else:
 
 file = open(f"{parent_dir}/{new_dir}/{pd}.txt","w")
 
+print("\n\n The tasks for day are\n\n")
 
 for x in todo :
     print(f" ->{x}")
