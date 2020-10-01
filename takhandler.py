@@ -36,17 +36,25 @@ else:
     print("opaii!")
 
 
-
-file = open(f"{parent_dir}/{new_dir}/{pd}.txt","w")
-
 print("\n\n The tasks for day are\n\n")
+
+append_key ='w+'
 
 for x in todo :
     print(f" ->{x}")
-    file.write(f" ->{x}")
+    if os.path.exists(f"{pd}.txt"):
+        append_key = 'a'
+    else:
+        append_key = 'w'
 
 else:
     print("those were daily tasks\n\n")
+
+
+file = open(f"{parent_dir}/{new_dir}/{pd}.txt",append_key)
+
+for x in todo :
+    file.write(f"-->{x}\n")
 
 
 # here i am playing with list stuff
